@@ -1,0 +1,312 @@
+* {
+	margin: 0;
+/*	border: 1px dotted #ccc;*/
+}
+/*FONT DECLARATIONS*/
+@font-face {
+	font-family: 'Norwester';
+	src: url('../fonts/norwester.otf') format('opentype');
+}
+
+/* /FONT DECLARATIONS*/
+header, main, footer {
+/*	border: 1px solid blue;*/
+}
+body {
+	font-family: 'Roboto', 'calibri', arial;
+	font-size: 15px;
+	color: white;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #69d3c4;
+	border-color: #69d3c4 !important;
+}
+button {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	margin-top: 50px;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 0;
+}
+button: hover {
+	border-color: #69d3c4 !important;
+}
+button > a {
+	display: block;
+	padding: 10px 25px;
+}
+button.bttn-appt {
+
+}
+/*button.bttn-appt span i {
+	padding: 0;
+	margin: 0;
+}*/
+
+.upper-all {
+	text-transform: uppercase;
+}
+.text-black {
+	color: #000 !important;
+}
+.border-black {
+	border-color: #000 !important;
+}
+.semi-underline {
+	width: 115px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 5px solid #fff;
+}
+
+.site-grid {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"hb"
+	"mc"
+	"fs"
+	;
+}
+
+header {
+	grid-area: hb;
+	background-color: brown;
+	background-image: url("../images/fillinger-home-banner-img.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+main {
+	grid-area: mc;
+}
+footer {
+	grid-area: fs;
+	text-align: center;
+	background: #000;
+}
+.header-inner, .banner-outer, .sect-inner, .footer-inner {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.header-outer {
+	background-color: rgba(51,51,51,0.7);
+}
+.top-bar {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"tba"
+	"tbb"
+	"tbc"
+	;
+	text-align: center;
+}
+
+.top-bar > div {
+	padding-top: 30px;
+}
+.tb-address {
+	grid-area: tba;
+	margin: auto 0;
+}
+.tb-brand {
+	grid-area: tbb;
+}
+.tb-brand > a {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+	"bi"
+	"bn"
+	;
+}
+
+#brand-icon {
+	grid-area: bi;
+	text-align: center;
+	margin: auto 0;
+}
+#brand-name {
+	font-size: 36px;
+	grid-area: bn;
+	margin: auto 0;
+}
+
+.tb-contact {
+	grid-area: tbc;
+	margin: auto 0;
+}
+
+/* NAVIGATION MENU */
+div#deskNav { display: none; }
+
+div#mobileNav {
+	display: grid;
+	grid-template-columns: auto 100px;
+	grid-template-rows: 100%;
+	grid-template-areas: "blnk hm";
+	padding-bottom: 10px;
+}
+.left-hm {
+	grid-area: blnk;
+}
+.right-hm {
+	grid-area: hm;
+	text-align: right;
+}
+.navicon-cont {
+	display: inline-block;
+	padding: 2px 10px;
+	border: 2px solid #f1f1f1;
+	border-radius: 3px;
+}
+
+
+
+/* nav overlay for mobile */
+.overlay {
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	overflow-y: hidden;
+	transition: 0.5s;
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.overlay a {
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #818181;
+	transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+	color: #69d3c4;
+}
+
+.overlay .closebtn {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 40px;
+}
+/* nav overlay for mobile end */
+
+/* NAVIGATION MENU end */
+.banner {
+	font-size: 24px;
+	text-align: center;
+	padding: 30px;
+}
+.banner h1 {
+	font-size: 48px;
+}
+
+div.sect-inner {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto;
+}
+
+div.sect-inner > .left-col {
+	padding: 20px 0;	
+}
+div.sect-inner > .right-col {
+	padding: 20px 0;	
+}
+
+/* -------------- SECTION IDs -------------- */
+#sect-1{
+	background-color: rgba(64,224,228,0.7);
+	background-image: url("../images/foot-skeleton.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#sect-2{
+	background-color: rgba(255,255,255,0.7);
+	background-image: url("../images/or-gown-gloves.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#sect-3{
+	background-color: rgba(10,10,228,0.7);
+	background-image: url("../images/fillinger-foot-clinic-photo.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.left-col {
+	font-family: 'Norwester', 'Roboto', arial;
+	font-size: 36px;
+}
+
+div .ul-divider {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+	"lis1"
+	"lis2"
+	;
+}
+.ul-divider > div:child(1){
+	grid-area: lis1;
+}
+.ul-divider > div:child(2){
+	grid-area: lis2;
+}
+
+ul.wwtlist {
+	/*list-style-position: inside;*/
+	-webkit-padding-start: 30px;
+	-webkit-padding-end: 30px;
+}
+.wwtlist li {
+	list-style-image: url("../images/list-image.png");
+	padding-right: 23px;
+}
+
+div#loc-and-sched {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+div#loc-and-sched > b {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+div#loc-and-sched > p {
+	font-size: 15px;
+	line-height: 25px;
+}
+
+div#loc-and-sched table tr > td:nth-child(1) {
+	min-width: 100px;
+}
+.footer-inner {
+	padding: 30px 0;
+}
